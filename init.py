@@ -13,7 +13,9 @@ if __name__ == '__main__':
     model.fit()
 
     u,i = '31447','553171'
-    model.predict(u, i)
+    print(model.predict(u, i))
 
     new_u = {553171:4,459804:3,308825:5}
-    model.predict(new_u, i, k = 200)
+    print(model.predict(new_u, i, k = 200))
+
+    print(model.get_top_N(u, [553171,459804,308825]))
