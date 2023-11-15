@@ -17,7 +17,7 @@ A weighted hyprid recommender system for touring servicrs that combines content-
 
 ### General Archticture
 
-![Archticture diagram](./Recommender%20Archticture%201.png)
+![Archticture diagram](./reports/Recommender%20Archticture%201.png)
 
 As Seen in the figure above, the system consists of two models:
 
@@ -35,9 +35,14 @@ The method described earlier is only for making predictions for users that have 
 
 The figure below shows how the model got adjusted to be able to make predictions for new users.
 
-![Archticture diagram](./Recommender%20Archticture%202.png)
+![Archticture diagram](./reports/Recommender%20Archticture%202.png)
 
 as the figure shows the adjusted version uses the SVD model to compute a full ratings matrix for all users and items and then uses that as baises for a KNN-Based model which compute the estimate of the rating as a similarity-weighted average among the top-K nearest neighbors then this predicted rating is passed to a baseline model which adjusts the rating to reflect the difference in bias between the user and the neighbors and compute the final estimation of the collaborative filtering component of the model.
+
+## Evaluation
+
+### Hit rate score
+![Archticture diagram](./reports/HIT%20RATE.png)
 
 ## How to use it
 

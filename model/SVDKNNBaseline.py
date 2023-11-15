@@ -130,7 +130,7 @@ class SVDKNNBaseline(AlgoBase):
             bias_sum += bias
         
         bias_difference = user_bias - (bias_sum / k)
-        neighbors_prediction = weighted_sum / sim_sum
+        neighbors_prediction = weighted_sum / (sim_sum+.00001)
         
         prediction = neighbors_prediction + (((bias_difference / 5) * neighbors_prediction))
         return self._clip(prediction[0])

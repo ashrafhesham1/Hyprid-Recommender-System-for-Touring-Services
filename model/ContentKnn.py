@@ -142,7 +142,7 @@ class ContentKnn(AlgoBase):
             weighted_sum += sim * rating
             sim_sum += sim
         
-        return self._clip(weighted_sum / sim_sum)
+        return self._clip(weighted_sum / (sim_sum + .00001))
     
     def predict_new_user(self, user_ratings_dict, item_id, k = 40):
         '''
@@ -162,7 +162,7 @@ class ContentKnn(AlgoBase):
             weighted_sum += sim * rating
             sim_sum += sim
         
-        return self._clip(weighted_sum / sim_sum)
+        return self._clip(weighted_sum / (sim_sum+.00001))
 
     def _clip(self,val, lower = 0.0, upper = 5.0):
         '''
