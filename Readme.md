@@ -6,6 +6,7 @@
 - [Architecture](#archticture)
   - [General Architecture](#general-archticture)
   - [Making Predictions for Unseen Users](#making-predictions-for-unseen-users)
+- [Evaluation](#evaluation)
 - [How to Use It](#how-to-use-it)
 - [Technologies](#technologies)
 
